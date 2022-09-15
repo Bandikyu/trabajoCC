@@ -5,3 +5,6 @@
 .bg-opacity-65 {
     background-color: rgba(33,37,41,.65);
 }
+.w-75 {
+    width: 90%!important;
+}

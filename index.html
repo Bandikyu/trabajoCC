@@ -10,42 +10,61 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
-        <div class="container-fluid justify-content-center">
-            <div class="row row-cols-2">
-                <div class="col-2">
-                    <div class="row">
-                        <a href="#" class="navbar-brand d-flex text-center">
-                            <img class="col-7 justify-item-end" src="./img/codoacodo.png" alt="">
-                            <h3 class="align-self-center">Conf Bs As</h3>
-                        </a>
-                    </div>
-                </div>
-                <button class="navbar-toggler position-absolute" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul class="row list-unstyled fs-4 ">
-                        <li class="col-auto nav-item "><a href="" class="nav-link active">La conferencia</a></li>
-                        <li class="col-auto nav-item "><a href="" class="nav-link">Los oradores</a></li>
-                        <li class="col-auto nav-item "><a href="" class="nav-link">El lugar y la fecha</a></li>
-                        <li class="col-auto nav-item "><a href="" class="nav-link">Conviertete en orador</a></li>
-                        <li class="col-auto nav-item "><a href="" class="nav-link">Comprar tickets</a></li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-expand-xxl navbar-dark bg-dark">
+        <div class="container-fluid w-75 justify-content-around">
+            <a class="navbar-brand d-flex fs-4 col-2" href="#">
+                <picture>
+                    <source media="(max-width: 500px)" srcset="./img/codoacodo.png" height="50"  sizes="50w">
+                    <img src="./img/codoacodo.png" alt="Logo" width="auto" height="80" class="d-inline-block align-text-top">
+                </picture>
+                <span class="align-self-center">Conf Bs As</span>
+            </a>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse fs-4" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">La conferencia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Los oradores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">El lugar y la fecha</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Conviertete en orador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success" href="#">Comprar tickets</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
     <header class="container-small position-relative z-index-5">
-        <img src="./img/ba1.jpg" class="img-fluid" alt="">
+        <div id="carouselBsAs" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/ba1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/ba2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/ba3.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+        </div>
         <div class="container-small position-absolute top-0 end-0 w-100 h-100 bg-opacity-65"> 
-            <div class="col-5 offset-6 h-100">
+            <div class="col-11 offset-lg-6 col-lg-5 h-100">
                 <div class="row h-100 align-content-center text-end text-white">
                     <h1 class="h1">Conf Bs As</h1>
                     <p class="fs-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum rhoncus velit. Nunc efficitur in sapien varius euismod. Sed pharetra pretium enim, tincidunt pharetra purus elementum nec. In id orci quam. Pellentesque dignissim a dui quis aliquet. Aliquam sit amet lorem nibh.</p>
                     <div class="row justify-content-end gap-4 g-2">
-                        <button type="button" class="btn btn-outline-light col-3 btn-lg">Quiero ser orador</button>
-                        <button type="button" class="btn btn-success col-3 btn-lg">Comprar tickets</button>
+                        <button type="button" class="btn btn-outline-light col-auto btn-lg">Quiero ser orador</button>
+                        <button type="button" class="btn btn-success col-auto btn-lg">Comprar tickets</button>
                     </div>
                 </div>
             </div> 
