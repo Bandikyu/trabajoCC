@@ -1,0 +1,7 @@
+* {
+    /* border: 1px solid white; */
+}
+
+.bg-opacity-65 {
+    background-color: rgba(33,37,41,.65);
+}

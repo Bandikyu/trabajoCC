@@ -1,0 +1,10 @@
+.m-nav {
+    display: flex;
+    justify-content: space-around;
+}
+.m-nav  .navbar-brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid;
+}
