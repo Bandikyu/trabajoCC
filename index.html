@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navId">
     <nav class="navbar nav-justified navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid w-75 justify-content-around">
             <a class="navbar-brand d-flex fs-4 col-2" href="#">
@@ -25,13 +25,13 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav text-nowrap text-resp-ti">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">La conferencia</a>
+                        <a class="nav-link" aria-current="page" href="#scrollspyHeading1">La conferencia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Los oradores</a>
+                        <a class="nav-link" href="#scrollspyHeading2">Los oradores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">El lugar y la fecha</a>
+                        <a class="nav-link" href="#scrollspyHeading3">El lugar y la fecha</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Conviertete en orador</a>
@@ -60,7 +60,7 @@
         <div class="container-small position-absolute top-0 end-0 w-100 h-100 d-flex justify-content-end"> 
             <div class="col-12 px-3 col-lg-6 me-lg-5">
                 <div class="row h-100 align-content-center text-end text-white">
-                    <h1 class="h1">Conf Bs As</h1>
+                    <h1 class="h1" id="scrollspyHeading1">Conf Bs As</h1>
                     <p class="text-resp-pa">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum rhoncus velit. Nunc efficitur in sapien varius euismod. Sed pharetra pretium enim, tincidunt pharetra purus elementum nec. In id orci quam. Pellentesque dignissim a dui quis aliquet. Aliquam sit amet lorem nibh.</p>
                     <div class="row justify-content-end gap-2 gap-lg-4 g-lg-2">
                         <button type="button" class="btn btn-outline-light col-auto btn-lg">Quiero ser orador</button>
@@ -71,8 +71,8 @@
         </div>
     </header>
     <section class="container">
-        <h1 class="fs-6 text-uppercase text-wrap text-center my-3">Conoce a los <span class="h3 mt-2" style="display:block;">oradores</span></h1>
-        <div class="d-flex justify-content-center gap-4">
+        <h1 id="scrollspyHeading2" class="fs-6 text-uppercase text-wrap text-center my-3">Conoce a los <span class="h3 mt-2" style="display:block;">oradores</span></h1>
+        <div class="d-flex justify-content-center gap-1 gap-md-4 mi-mod">
             <div class="card">
                 <img src="./img/steve.jpg" class="card-img-top" alt="Steve Jobs">
                 <div class="card-body">
@@ -100,6 +100,16 @@
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
               </div>
+        </div>
+    </section>
+    <!-- QUITAR EL mb-5 CUANDO ARME EL PROXIMO SECTION -->
+    <section class="container place-date mt-4 mb-5"> 
+        <div class="row row-cols-sm-2 gx-3">
+            <img src="/img/honolulu.jpg" style="object-fit: cover;" alt="">
+            <div>
+                <h1 id="scrollspyHeading3">Bs As - Octubre</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus molestias praesentium, illum inventore numquam eaque adipisci cupiditate ad dolorem voluptates dolorum maxime delectus itaque nisi iusto nesciunt laborum amet laudantium.</p>
+            </div>
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
