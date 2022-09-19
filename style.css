@@ -95,6 +95,7 @@
 .form-floating .form-control{
     height: 40px;
     transition: .2s;
+    color: #ced4da;
 }
 .form-floating .form-control:focus{
     border-top: none;
@@ -122,6 +123,7 @@
     display: flex;
     align-items: center;
     width: auto;
+    color: #6c757d;
 }
 .form-floating .form-control:focus + label {
     font-size: .8rem;
