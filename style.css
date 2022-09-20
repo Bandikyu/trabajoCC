@@ -1,7 +1,7 @@
 /* --------------- GENERAL --------------- */
-/* html {
+html {
     scroll-padding-top: 100px;
-} */
+}
 .w-75 {
     width: 90%!important;
 }
@@ -30,6 +30,9 @@
     width: 100%;
     z-index: 2;
 }
+.navbar-collapse {
+    transition: .2s;
+}
 
 .navbar .container-fluid {
     position: relative;
@@ -39,18 +42,6 @@
     font-size: 1.3rem;
 }
 
-@media (max-width: 992px) {  
-    .navbar-collapse {
-        width: 300px;
-        position: absolute;
-        top: 100px;
-        right: 0;
-        z-index: 2;
-        background-color: #212529;
-        transition: .2s;
-    }
-
-}
 @media (max-width: 1100px) {
     .navbar img {
         object-fit: cover;
@@ -73,7 +64,6 @@
         padding: 20px 0;
         width: 300px;
         position: absolute;
-        top: auto;
         bottom: 70px;
         right: 0;
         z-index: 2;
@@ -82,6 +72,25 @@
 }
 
 /* --------------- ORADORES --------------- */
+.card {
+    overflow: hidden;
+    transition: .2s;
+}
+.card:hover {
+    box-shadow: 2px 2px 20px -10px;
+}
+.card .card-body {
+    z-index: 2;
+    background-color: white;
+}
+.card img {
+    transition: .2s;
+    z-index: 0;
+}
+.card:hover img {
+    transform: scale(1.04);
+}
+
 @media (max-width: 576px) {
     .mi-mod {
         flex-direction: column;
@@ -95,7 +104,7 @@
 .form-floating .form-control{
     height: 40px;
     transition: .2s;
-    color: #ced4da;
+    border-color: #ced4da;
 }
 .form-floating .form-control:focus{
     border-top: none;
@@ -127,10 +136,27 @@
 }
 .form-floating .form-control:focus + label {
     font-size: .8rem;
-    top: -15px;
+    top: -10px;
+    height: 10px;
 }
 .form-floating>.form-control:not(:placeholder-shown)~label {
     font-size: .8rem;
-    top: -15px;
+    top: -10px;
+    height: 10px;
+}
+.cont-txt-area .text-area{
+    height: 200px;
+    font-size: 1rem;
 }
 
+.cont-txt-area label {
+    height: 15px;
+    top: 5px;
+    font-size: 1.3rem;
+}
+
+/* --------------- FOOTER --------------- */
+
+.footer {
+    background-color: rgb(31, 77, 103);
+}
