@@ -17,7 +17,7 @@ html {
 .carousel-item img{
     height: 700px;
     object-fit: cover;
-    filter:brightness(.50);
+    filter:brightness(.40);
 }
 .carousel-item {
     transition: transform 1.5s;

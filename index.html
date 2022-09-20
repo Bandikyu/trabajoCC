@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TP Integrador</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script>
@@ -45,16 +47,16 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav text-nowrap text-resp-ti">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#scrollspyHeading1">La conferencia</a>
+                        <a class="nav-link active" aria-current="page" href="#la_conferencia">La conferencia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#scrollspyHeading2">Los oradores</a>
+                        <a class="nav-link" href="#los_oradores">Los oradores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#scrollspyHeading3">El lugar y la fecha</a>
+                        <a class="nav-link" href="#el_lugar_y_la_fecha">El lugar y la fecha</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#scrollspyHeading4">Conviertete en orador</a>
+                        <a class="nav-link" href="#conviertete_en_orador">Conviertete en orador</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-success" href="#">Comprar tickets</a>
@@ -80,7 +82,7 @@
         <div class="container-small position-absolute top-0 end-0 w-100 h-100 d-flex justify-content-end"> 
             <div class="col-12 px-3 col-lg-6 me-lg-5">
                 <div class="row h-100 align-content-center text-end text-white">
-                    <h1 class="h1" id="scrollspyHeading1">Conf Bs As</h1>
+                    <h1 class="h1" id="la_conferencia">Conf Bs As</h1>
                     <p class="text-resp-pa">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum rhoncus velit. Nunc efficitur in sapien varius euismod. Sed pharetra pretium enim, tincidunt pharetra purus elementum nec. In id orci quam. Pellentesque dignissim a dui quis aliquet. Aliquam sit amet lorem nibh.</p>
                     <div class="row justify-content-end gap-2 gap-lg-4 g-lg-2">
                         <button type="button" class="btn btn-outline-light col-auto btn-lg">Quiero ser orador</button>
@@ -91,7 +93,7 @@
         </div>
     </header>
     <section class="container">
-        <h1 id="scrollspyHeading2" class="fs-6 text-uppercase text-wrap text-center my-3">Conoce a los <span class="h3 mt-2" style="display:block;">oradores</span></h1>
+        <h1 id="los_oradores" class="fs-6 text-uppercase text-wrap text-center my-3">Conoce a los <span class="h3 mt-2" style="display:block;">oradores</span></h1>
         <div class="d-flex justify-content-center gap-1 gap-md-4 mi-mod cont-card">
             <div class="card">
                 <img src="./img/steve.jpg" class="card-img-top" alt="Steve Jobs">
@@ -122,22 +124,20 @@
               </div>
         </div>
     </section>
-    <!-- QUITAR EL mb-5 CUANDO ARME EL PROXIMO SECTION -->
     <section class="container-fluid place-date mt-4"> 
         <div class="row row-cols-sm-2">
             <img src="./img/honolulu.jpg" style="object-fit: cover; zoom: .1;" alt="">
             <div class="bg-dark text-white p-2 p-sm-4">
-                <h3 id="scrollspyHeading3">Bs As - Octubre</h3>
+                <h3 id="el_lugar_y_la_fecha">Bs As - Octubre</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus molestias praesentium, illum inventore numquam eaque adipisci cupiditate ad dolorem voluptates dolorum maxime delectus itaque nisi iusto nesciunt laborum amet laudantium.</p>
                 <button type="button" class="btn btn-outline-light col-auto mb-2">Conoce mas</button>
             </div>
         </div>
     </section>
     <section class="container col-lg-6 mb-4">
-        <h1 id="scrollspyHeading4" class="fs-6 text-uppercase text-wrap text-center my-3">Conviertete en un<span class="h2 mt-2 d-block">orador</span></h2>
+        <h1 id="conviertete_en_orador" class="fs-6 text-uppercase text-wrap text-center my-3">Conviertete en un<span class="h2 mt-2 d-block">orador</span></h2>
         <p class="text-center mb-3">Anótate como orador para dar una <u style="text-decoration-style: dotted; text-underline-position: under;">charla ignite</u>. Cuéntanos de qué quiere hablar!</p>
         <div>
-            <!-- agregar validaciones -->
             <form class="row gy-4 gx-3 needs-validation" novalidate>
                 <div class="form-floating col-12 col-md-6">
                     <input type="text" class="form-control " id="nameInput" placeholder="Nombre" required>
