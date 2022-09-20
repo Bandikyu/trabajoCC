@@ -7,7 +7,27 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-
+    <script>
+        //Para la validacion del formulario.
+        // Self-executing function
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navId" class="pb-5 pb-sm-0 mb-4 mb-sm-0">
     <nav class="navbar nav-justified px-xl-5 navbar-expand-lg navbar-dark bg-dark">
@@ -72,7 +92,7 @@
     </header>
     <section class="container">
         <h1 id="scrollspyHeading2" class="fs-6 text-uppercase text-wrap text-center my-3">Conoce a los <span class="h3 mt-2" style="display:block;">oradores</span></h1>
-        <div class="d-flex justify-content-center gap-1 gap-md-4 mi-mod">
+        <div class="d-flex justify-content-center gap-1 gap-md-4 mi-mod cont-card">
             <div class="card">
                 <img src="./img/steve.jpg" class="card-img-top" alt="Steve Jobs">
                 <div class="card-body">
@@ -92,7 +112,7 @@
                 </div>
               </div>
               <div class="card">
-                <img src="./img/ada.jpeg" class="Ada Lovelace" alt="Ada Lovelace">
+                <img src="./img/ada.jpeg" class="card-img-top" alt="Ada Lovelace">
                 <div class="card-body">
                   <span class="badge text-bg-danger ">Negocios</span>
                   <span class="badge text-bg-secondary">Startups</span>
@@ -103,14 +123,13 @@
         </div>
     </section>
     <!-- QUITAR EL mb-5 CUANDO ARME EL PROXIMO SECTION -->
-    <!-- ver como ponerle la altura en el pie para que la barra fixed no tape -->
-    <section class="container-fluid place-date mt-4 mb-5"> 
+    <section class="container-fluid place-date mt-4"> 
         <div class="row row-cols-sm-2">
-            <img src="./img/honolulu.jpg" class="border" style="object-fit: cover; zoom: .1;" alt="">
+            <img src="./img/honolulu.jpg" style="object-fit: cover; zoom: .1;" alt="">
             <div class="bg-dark text-white p-2 p-sm-4">
                 <h3 id="scrollspyHeading3">Bs As - Octubre</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus molestias praesentium, illum inventore numquam eaque adipisci cupiditate ad dolorem voluptates dolorum maxime delectus itaque nisi iusto nesciunt laborum amet laudantium.</p>
-                <button type="button" class="btn btn-outline-light col-auto">Conoce mas</button>
+                <button type="button" class="btn btn-outline-light col-auto mb-2">Conoce mas</button>
             </div>
         </div>
     </section>
@@ -119,21 +138,21 @@
         <p class="text-center mb-3">Anótate como orador para dar una <u style="text-decoration-style: dotted; text-underline-position: under;">charla ignite</u>. Cuéntanos de qué quiere hablar!</p>
         <div>
             <!-- agregar validaciones -->
-            <form class="row gy-4 gx-3">
+            <form class="row gy-4 gx-3 needs-validation" novalidate>
                 <div class="form-floating col-12 col-md-6">
-                    <input type="text" class="form-control" id="nameInput" placeholder="Nombre">
+                    <input type="text" class="form-control " id="nameInput" placeholder="Nombre" required>
                     <label for="nameInput">Nombre</label>
                 </div>                  
                 <div class="form-floating col-12 col-md-6">
-                    <input type="text" class="form-control" id="lnameInput" placeholder="Apellido">
+                    <input type="text" class="form-control" id="lnameInput" placeholder="Apellido" required>
                     <label for="lnameInput">Apellido</label>
                 </div>                  
                 <div class="form-floating cont-txt-area">
-                    <textarea class="form-control form-control-lg pt-2 text-area" placeholder="Sobre que quieres hablar?" aria-label="With textarea"></textarea>
+                    <textarea class="form-control form-control-lg pt-2 text-area" placeholder="Sobre que quieres hablar?" aria-label="With textarea" required></textarea>
                     <label for="lnameInput">Sobre que quieres hablar?</label>
                 </div>
                 <p class="mt-1" style="font-size:.7rem">Recuerda incluir un titulo para tu charla</p>
-                <button type="button" class="btn btn-success mt-0">Enviar</button>
+                <button type="submit" class="btn btn-success mt-0">Enviar</button>
             </form>
         </div>
     </section>
