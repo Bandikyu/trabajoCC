@@ -2,14 +2,11 @@
 html {
     scroll-padding-top: 100px;
 }
-.w-75 {
-    width: 90%!important;
-}
-.text-resp-ti {
-    font-size: calc(100% + .1vw + .1vh);
-  }
-.text-resp-pa {
-    font-size: calc(100% + .2vw + .2vh);
+
+@media (max-width: 770px) {
+    :root {
+        font-size: .8rem;
+    }
 }
 
 /* --------------- CAROUSEL --------------- */
