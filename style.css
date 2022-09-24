@@ -2,17 +2,33 @@
 html {
     scroll-padding-top: 100px;
 }
+:root {
+    --bs-dark-rgb: 51,58,64;
+}
+
 
 @media (max-width: 770px) {
     :root {
         font-size: .8rem;
     }
 }
+@media ( (min-width: 770px) and (max-width: 1025px) ) {
+    :root {
+        font-size: .9rem;
+    }
+}
 
 /* --------------- CAROUSEL --------------- */
+@media (max-width: 770px) {
+    .carousel-item img{
+        height: calc(100vh - 80px);
+        object-fit: cover;
+        filter:brightness(.40);
+    }
+}
 
 .carousel-item img{
-    height: 700px;
+    height: 750px;
     object-fit: cover;
     filter:brightness(.40);
 }
@@ -57,7 +73,7 @@ html {
         height: 80px;
     }
     .show {
-        padding: 25px 0 0;
+        padding: 25px 0;
     }
     .navbar-collapse {
         position: absolute;
@@ -66,7 +82,7 @@ html {
         border-top-left-radius: 15px;
         right: 0;
         z-index: 2;
-        background-color: #212529;
+        background-color: rgb(var(--bs-dark-rgb));
     }
 }
 
