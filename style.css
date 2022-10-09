@@ -17,6 +17,10 @@ html {
         font-size: .9rem;
     }
 }
+.subletter {
+    color: #6c757d;
+    font-size: .7rem;
+}
 
 /* --------------- CAROUSEL --------------- */
 @media (max-width: 770px) {
@@ -115,7 +119,7 @@ html {
 
 /* --------------- LUGAR Y FECHA --------------- */
 
-/* --------------- FORM SER ORADOR ---------------  */
+/* --------------- FORM - SER ORADOR ---------------  */
 
 .form-floating .form-control{
     height: 40px;
