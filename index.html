@@ -9,27 +9,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script>
-        //Para la validacion del formulario.
-        //Self-executing function
-        (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
-    </script>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navId" class="pb-5 pb-sm-0 mb-4 mb-sm-0 position-relative">
     <nav class="navbar nav-justified px-xl-5 navbar-expand-lg navbar-dark bg-dark">
@@ -59,7 +38,7 @@
                         <a class="nav-link" href="#conviertete_en_orador">Conviertete en orador</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-success" href="#">Comprar tickets</a>
+                        <a class="nav-link text-success" href="#ticket" data-bs-toggle="modal" data-bs-target="#ticket">Comprar tickets</a>
                     </li>
                 </ul>
             </div>
@@ -86,7 +65,7 @@
                     <p class="text-resp-pa fs-5">Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que estan creando el futuru de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
                     <div class="row justify-content-end gap-2 gap-lg-4 g-lg-2">
                         <a href="#conviertete_en_orador" class="btn btn-outline-light col-auto btn-lg">Quiero ser orador</a>
-                        <button type="button" class="btn btn-success col-auto btn-lg">Comprar tickets</button>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#ticket" class="btn btn-success col-auto btn-lg">Comprar tickets</button>
                     </div>
                 </div>
             </div> 
@@ -157,84 +136,95 @@
             </form>
         </div>
     </section>
-    <section class="container col-lg-6 mb-4">
-        <div style="overflow-x: auto;" class="row flex-nowrap">
-            <div class="col-5 col-md-4 px-1">
-                <input type="radio" class="btn-check" name="options-outlined" id="primary-outlined" autocomplete="off">
-                <label class="btn btn-outline-primary d-block rounded-0" for="primary-outlined">
-                    <h2 class="text-black fs-6 text-wrap text-center my-2">Estudiante</h2>
-                    <p class="text-black small">Tiene un descuento 
-                        <span class="fw-bold d-block my-2">80%</span>
-                        <span class="text-nowrap subletter">* presentar documentacion</span>
-                    </p>
-                </label>
-            </div>
-            
-            <div class="col-5 col-md-4 px-1">
-                <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off">
-                <label class="btn btn-outline-success d-block rounded-0" for="success-outlined">
-                    <h2 class="text-black fs-6 text-wrap text-center my-2">Trainee</h2>
-                    <p class="text-black small">Tiene un descuento 
-                        <span class="fw-bold d-block my-2">50%</span>
-                        <span class="text-nowrap subletter">* presentar documentacion</span>
-                    </p>
-                </label>
-            </div>
-
-            <div class="col-5 col-md-4 px-1">
-                <input type="radio" class="btn-check" name="options-outlined" id="warning-outlined" autocomplete="off">
-                <label class="btn btn-outline-warning d-block rounded-0" for="warning-outlined">
-                    <h2 class="text-black fs-6 text-wrap text-center my-2">Junior</h2>
-                    <p class="text-black small">Tiene un descuento 
-                        <span class="fw-bold d-block my-2">15%</span>
-                        <span class="text-nowrap subletter">* presentar documentacion</span>
-                    </p>
-                </label>
+    <!-- Modal -->
+    <div class="modal fade" id="ticket" tabindex="2" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close border" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <section class="container col-lg-6 mb-4">
+                        <!-- Mejorar: colocar un popup explicando que la documentacion sera requerida con el ticket en la entrada del evento -->
+                        <form class="row gy-4 gx-3 needs-validation" novalidate>
+                            <div style="overflow-x: auto; padding-top: 20px;" class="row flex-nowrap">
+                                <div class="col-5 col-md-4 px-1">
+                                    <input type="radio" class="btn-check" name="options-outlined" value="Estudiante"
+                                        id="targetEstudiante" autocomplete="off">
+                                    <label class="btn btn-outline-primary d-block rounded-0" for="targetEstudiante">
+                                        <h2 class="fs-6 text-wrap text-center my-2">Estudiante</h2>
+                                        <p class="small">Tiene un descuento
+                                            <span class="fw-bold d-block my-2">80%</span>
+                                            <span class="subletter">* presentar documentacion</span>
+                                        </p>
+                                    </label>
+                                </div>
+                                <div class="col-5 col-md-4 px-1">
+                                    <input type="radio" class="btn-check" name="options-outlined" value="Trainee"
+                                        id="targetTrainee" autocomplete="off">
+                                    <label class="btn btn-outline-success d-block rounded-0" for="targetTrainee">
+                                        <h2 class="fs-6 text-wrap text-center my-2">Trainee</h2>
+                                        <p class="small">Tiene un descuento
+                                            <span class="fw-bold d-block my-2">50%</span>
+                                            <span class="subletter">* presentar documentacion</span>
+                                        </p>
+                                    </label>
+                                </div>
+                                <div class="col-5 col-md-4 px-1">
+                                    <input type="radio" class="btn-check" name="options-outlined" value="Junior"
+                                        id="targetJunior" autocomplete="off">
+                                    <label class="btn btn-outline-warning d-block rounded-0" for="targetJunior">
+                                        <h2 class="fs-6 text-wrap text-center my-2">Junior</h2>
+                                        <p class="small">Tiene un descuento
+                                            <span class="fw-bold d-block my-2">15%</span>
+                                            <span class="subletter">* presentar documentacion</span>
+                                        </p>
+                                    </label>
+                                </div>
+                            </div>
+                            <h2 id="comprar_tickets" class="fs-6 text-uppercase text-wrap text-center my-3">Venta<span
+                                    class="h2 mt-2 d-block">Valor de tickets $200</span>
+                            </h2>
+                            <div class="form-floating col-12 col-md-6">
+                                <input type="text" class="form-control " id="nameInput" placeholder="Nombre" required>
+                                <label for="nameInput">Nombre</label>
+                            </div>
+                            <div class="form-floating col-12 col-md-6">
+                                <input type="text" class="form-control" id="lnameInput" placeholder="Apellido" required>
+                                <label for="lnameInput">Apellido</label>
+                            </div>
+                            <div class="form-floating col-12">
+                                <input type="email" class="form-control" id="email" placeholder="Correo" required>
+                                <label for="email">Correo</label>
+                            </div>
+                            <div class=" col-6">
+                                <label for="amount">Cantidad</label>
+                                <input type="number" class="form-control" id="amount" placeholder="Cantidad" required>
+                            </div>
+                            <div class=" col-6">
+                                <label for="category">Categoria</label>
+                                <select class="form-select text-secondary" id="selectCategory"
+                                    aria-label="Example select with button addon">
+                                    <option value="-">-</option>
+                                    <option id="Estudiante" value="Estudiante">Estudiante</option>
+                                    <option id="Trainee" value="Trainee">Trainee</option>
+                                    <option id="Junior" value="Junior">Junior</option>
+                                </select>
+                            </div>
+                            <div class="px-4 py-3 rounded-2"
+                                style="background-color: rgb(204,229,255); color: rgb(0,64,133);">
+                                Total a pagar: $ <span></span>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <button type="reset" class="btn btn-success w-50">Borrar</button>
+                                <button type="button" class="btn btn-success w-50">Resumen</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
             </div>
         </div>
-        <h1 id="comprar_tickets" class="fs-6 text-uppercase text-wrap text-center my-3">Venta<span class="h2 mt-2 d-block">Valor de tickets $200</span></h2>
-        <div>
-            <form class="row gy-4 gx-3 needs-validation" novalidate>
-                <div class="form-floating col-12 col-md-6">
-                    <input type="text" class="form-control " id="nameInput" placeholder="Nombre" required>
-                    <label for="nameInput">Nombre</label>
-                </div>                  
-                <div class="form-floating col-12 col-md-6">
-                    <input type="text" class="form-control" id="lnameInput" placeholder="Apellido" required>
-                    <label for="lnameInput">Apellido</label>
-                </div>                  
-                <div class="form-floating col-12">
-                    <input type="email" class="form-control" id="email" placeholder="Correo" required>
-                    <label for="email">Correo</label>
-                </div>                  
-                <div class=" col-6">
-                    <label for="amount">Cantidad</label>
-                    <input type="amount" class="form-control" id="amount" placeholder="Cantidad" required>
-                </div>                  
-                <div class=" col-6">
-                    <label for="category">Categoria</label>
-                    <select class="form-select text-secondary" id="inputGroupSelect03" aria-label="Example select with button addon">
-                        <!-- <option selected>Choose...</option> -->
-                        <option value="Estudiante">Estudiante</option>
-                        <option value="Trainee">Trainee</option>
-                        <option value="Junior">Junior</option>
-                      </select>
-                    <!-- <input type="category" class="form-control" id="category" placeholder="Categoria" required> -->
-                </div>
-                <div class="px-4 py-3 rounded-2" style="background-color: rgb(204,229,255); color: rgb(0,64,133);">
-                    Total a pagar: $ <span></span>
-                </div>
-                <div class="d-flex gap-3">
-                    <button type="reset" class="btn btn-success w-50">Borrar</button>
-                    <button type="button" class="btn btn-success w-50">Resumen</button>
-                </div>
-<!--                 <div class="row justify-content-center row-cols-2 border mx-auto flex-nowrap gap-1">
-                    <button type="reset" class="btn btn-success mt-0 col-auto w-50">Borrar</button>
-                    <button type="button" class="btn btn-success mt-0 col-auto w-50">Resumen</button>
-                </div> -->
-            </form>
-        </div>
-    </section>
+    </div>
     <footer class="container-fluid text-white footer">
         <ul class="row d-flex justify-content-center align-items-center list-inline text-center mb-3 mb-sm-0 p-4 gap-3 gap-xl-5">
             <li class="col-sm-auto col-12">Preguntas <span class="d-block">frecuentes</span></li>
@@ -246,7 +236,10 @@
             <li class="col-sm-auto col-12">Estudiantes</li>
         </ul>
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="./scripts/TicketCategory.js"></script>
+    <script src="./scripts/TicketResult.js"></script>
+    <script src="./scripts/BoostrapForm.js"></script>
 </body>
 </html>
