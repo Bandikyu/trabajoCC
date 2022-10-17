@@ -201,23 +201,24 @@
                                 <label for="amount">Cantidad</label>
                                 <input type="number" class="form-control" id="amount" placeholder="Cantidad" required>
                             </div>
+                            <!-- Hacer que el boton resumen sea opaco hasta que se llenen los dos campos -->
+                            <!-- y cuando le de a resumen que cambie de color con un texto nuevo "comprar" -->
                             <div class=" col-6">
                                 <label for="category">Categoria</label>
                                 <select class="form-select text-secondary" id="selectCategory"
-                                    aria-label="Example select with button addon">
-                                    <option value="-">-</option>
+                                    aria-label="Example select with button addon" required>
+                                    <option value="-"></option>
                                     <option id="Estudiante" value="Estudiante">Estudiante</option>
                                     <option id="Trainee" value="Trainee">Trainee</option>
                                     <option id="Junior" value="Junior">Junior</option>
                                 </select>
                             </div>
-                            <div class="px-4 py-3 rounded-2"
-                                style="background-color: rgb(204,229,255); color: rgb(0,64,133);">
-                                Total a pagar: $ <span></span>
+                            <div class="alert alert-primary" role="alert">
+                                Total a pagar: $ <span id="printResult"></span>
                             </div>
                             <div class="d-flex gap-3">
                                 <button type="reset" class="btn btn-success w-50">Borrar</button>
-                                <button type="button" class="btn btn-success w-50">Resumen</button>
+                                <button type="submit" id="result" class="btn btn-success w-50">Resumen</button>
                             </div>
                         </form>
                     </section>
@@ -238,8 +239,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <script src="./scripts/TicketCategory.js"></script>
-    <script src="./scripts/TicketResult.js"></script>
+    <script type="module" src="./scripts/TicketCategory.js"></script>
+    <script type="module" src="./scripts/TicketResult.js"></script>
     <script src="./scripts/BoostrapForm.js"></script>
 </body>
 </html>
