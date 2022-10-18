@@ -146,12 +146,12 @@
                 <div class="modal-body">
                     <section class="container col-lg-6 mb-4">
                         <!-- Mejorar: colocar un popup explicando que la documentacion sera requerida con el ticket en la entrada del evento -->
-                        <form class="row gy-4 gx-3 needs-validation" novalidate>
-                            <div style="overflow-x: auto; padding-top: 20px;" class="row flex-nowrap">
+                        <form id="formTicket" class="row gy-4 gx-3 needs-validation justify-content-center" novalidate>
+                            <div style="overflow-x: auto; padding-top: 20px; scroll-snap-type: x;" class="row flex-nowrap contentCards">
                                 <div class="col-5 col-md-4 px-1">
                                     <input type="radio" class="btn-check" name="options-outlined" value="Estudiante"
                                         id="targetEstudiante" autocomplete="off">
-                                    <label class="btn btn-outline-primary d-block rounded-0" for="targetEstudiante">
+                                    <label class="btn btn-outline-primary d-block rounded-0 py-xl-4" for="targetEstudiante">
                                         <h2 class="fs-6 text-wrap text-center my-2">Estudiante</h2>
                                         <p class="small">Tiene un descuento
                                             <span class="fw-bold d-block my-2">80%</span>
@@ -162,7 +162,7 @@
                                 <div class="col-5 col-md-4 px-1">
                                     <input type="radio" class="btn-check" name="options-outlined" value="Trainee"
                                         id="targetTrainee" autocomplete="off">
-                                    <label class="btn btn-outline-success d-block rounded-0" for="targetTrainee">
+                                    <label style="scroll-snap-align: center;" class="btn btn-outline-success d-block rounded-0 py-xl-4" for="targetTrainee">
                                         <h2 class="fs-6 text-wrap text-center my-2">Trainee</h2>
                                         <p class="small">Tiene un descuento
                                             <span class="fw-bold d-block my-2">50%</span>
@@ -173,7 +173,7 @@
                                 <div class="col-5 col-md-4 px-1">
                                     <input type="radio" class="btn-check" name="options-outlined" value="Junior"
                                         id="targetJunior" autocomplete="off">
-                                    <label class="btn btn-outline-warning d-block rounded-0" for="targetJunior">
+                                    <label class="btn btn-outline-warning d-block rounded-0 py-xl-4" for="targetJunior">
                                         <h2 class="fs-6 text-wrap text-center my-2">Junior</h2>
                                         <p class="small">Tiene un descuento
                                             <span class="fw-bold d-block my-2">15%</span>
@@ -199,18 +199,18 @@
                             </div>
                             <div class=" col-6">
                                 <label for="amount">Cantidad</label>
-                                <input type="number" class="form-control" id="amount" placeholder="Cantidad" required>
+                                <input type="number" class="form-control" id="amount" placeholder="cantidad" min="1" required>
                             </div>
-                            <!-- Hacer que el boton resumen sea opaco hasta que se llenen los dos campos -->
                             <!-- y cuando le de a resumen que cambie de color con un texto nuevo "comprar" -->
                             <div class=" col-6">
                                 <label for="category">Categoria</label>
                                 <select class="form-select text-secondary" id="selectCategory"
                                     aria-label="Example select with button addon" required>
-                                    <option value="-"></option>
+                                    <option value="" selected disabled>Seleccione una categoria</option>
                                     <option id="Estudiante" value="Estudiante">Estudiante</option>
                                     <option id="Trainee" value="Trainee">Trainee</option>
                                     <option id="Junior" value="Junior">Junior</option>
+                                    <option id="Ninguna" value="Ninguna">Ninguna</option>
                                 </select>
                             </div>
                             <div class="alert alert-primary" role="alert">
@@ -218,7 +218,9 @@
                             </div>
                             <div class="d-flex gap-3">
                                 <button type="reset" class="btn btn-success w-50">Borrar</button>
-                                <button type="submit" id="result" class="btn btn-success w-50">Resumen</button>
+                                <div class="w-50" tabindex="0" data-bs-custom-class="btnResultTooltip" data-bs-delay='{"show":0,"hide":5000}' data-bs-toggle="btnResultTooltip" data-bs-placement="top" data-bs-title="Debe seleccionar una categoria y la cantidad de tickets">
+                                    <button type="button" id="result" class="btn btn-success w-100">Resumen</button>
+                                </div>
                             </div>
                         </form>
                     </section>
@@ -239,8 +241,9 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <script type="module" src="./scripts/TicketCategory.js"></script>
-    <script type="module" src="./scripts/TicketResult.js"></script>
+    <!-- ordenar todo en un solo modulo -->
+    <script type="module" src="./scripts/ticketCategory.js"></script>
+    <script type="module" src="./scripts/ticketResult.js"></script>
     <script src="./scripts/BoostrapForm.js"></script>
 </body>
 </html>
