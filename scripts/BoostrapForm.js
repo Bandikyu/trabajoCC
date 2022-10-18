@@ -18,6 +18,6 @@
     }, false);
 })();
 
-// Si voy a usar mas tooltips aca los activo de forma generica
-/* const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-let tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))*/
+// Tooltips genericos
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))

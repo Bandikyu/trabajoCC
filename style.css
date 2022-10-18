@@ -183,7 +183,7 @@ html {
 .was-validated .form-control:invalid:focus , .was-validated .form-control:valid:focus {
     box-shadow: none;
 }
-/* --------------- TICKET --------------- */
+/* --------------- MODAL TICKET --------------- */
 #ticket .modal-dialog {
     max-width: 80vw;
 }

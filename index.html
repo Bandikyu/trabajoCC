@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -147,11 +147,11 @@
                     <section class="container col-lg-6 mb-4">
                         <!-- Mejorar: colocar un popup explicando que la documentacion sera requerida con el ticket en la entrada del evento -->
                         <form id="formTicket" class="row gy-4 gx-3 needs-validation justify-content-center" novalidate>
-                            <div style="overflow-x: auto; padding-top: 20px; scroll-snap-type: x;" class="row flex-nowrap contentCards">
+                            <div tabindex="0" data-bs-delay='{"show":200,"hide":150}' data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="La documentacion sera requerida en mesa de entrada" style="overflow-x: auto; padding-top: 20px; scroll-snap-type: x;" class="row flex-nowrap contentCards">
                                 <div class="col-5 col-md-4 px-1">
                                     <input type="radio" class="btn-check" name="options-outlined" value="Estudiante"
                                         id="targetEstudiante" autocomplete="off">
-                                    <label class="btn btn-outline-primary d-block rounded-0 py-xl-4" for="targetEstudiante">
+                                    <label  class="btn btn-outline-primary d-block rounded-0 py-xl-4" for="targetEstudiante">
                                         <h2 class="fs-6 text-wrap text-center my-2">Estudiante</h2>
                                         <p class="small">Tiene un descuento
                                             <span class="fw-bold d-block my-2">80%</span>
@@ -197,11 +197,10 @@
                                 <input type="email" class="form-control" id="email" placeholder="Correo" required>
                                 <label for="email">Correo</label>
                             </div>
-                            <div class=" col-6">
+                            <div class="col-6">
                                 <label for="amount">Cantidad</label>
                                 <input type="number" class="form-control" id="amount" placeholder="cantidad" min="1" required>
                             </div>
-                            <!-- y cuando le de a resumen que cambie de color con un texto nuevo "comprar" -->
                             <div class=" col-6">
                                 <label for="category">Categoria</label>
                                 <select class="form-select text-secondary" id="selectCategory"
@@ -218,8 +217,9 @@
                             </div>
                             <div class="d-flex gap-3">
                                 <button type="reset" class="btn btn-success w-50">Borrar</button>
-                                <div class="w-50" tabindex="0" data-bs-custom-class="btnResultTooltip" data-bs-delay='{"show":0,"hide":5000}' data-bs-toggle="btnResultTooltip" data-bs-placement="top" data-bs-title="Debe seleccionar una categoria y la cantidad de tickets">
+                                <div class="w-50" tabindex="0" data-bs-custom-class="btnResultTooltip" data-bs-delay='{"show":0,"hide":3000}' data-bs-toggle="btnResultTooltip" data-bs-placement="top" data-bs-title="Debe seleccionar una categoria y la cantidad de tickets">
                                     <button type="button" id="result" class="btn btn-success w-100">Resumen</button>
+                                    <button type="submit"  id="buy" style="display: none;" class="btn btn-primary w-100">Comprar</button>
                                 </div>
                             </div>
                         </form>
@@ -242,8 +242,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <!--Mejorar ordenar todo en un solo modulo -->
-    <script type="module" src="./scripts/TicketCategory.js"></script>
-    <script type="module" src="./scripts/TicketResult.js"></script>
+    <!-- <script type="module" src="./scripts/TicketCategory.js"></script> -->
+    <!-- <script type="module" src="./scripts/TicketResult.js"></script> -->
+    <script type="module" src="./scripts/scripts.js"></script>
     <script src="./scripts/BoostrapForm.js"></script>
 </body>
 </html>
