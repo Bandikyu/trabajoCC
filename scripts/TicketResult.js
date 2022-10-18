@@ -29,7 +29,7 @@ btnReset.addEventListener("click", () => {
   modalTicket.classList.remove("glitchHideToolTip");
 });
 
-/* Tooltips */
+/* Tooltip */
 btnResult.classList.add("disabled");
 const resultTooltE = btnResult.parentNode;
 const tooltip = bootstrap.Tooltip.getOrCreateInstance(resultTooltE);
