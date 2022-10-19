@@ -1,6 +1,6 @@
 # TP Integrador CC
 
-[En Replit](https://TPIntegrador.brunoripoll1.repl.co)
+[En Replit](https://tp.brunoripoll1.repl.co)
 
 [En GitHubPage](https://bandikyu.github.io/trabajoCC/)
 
