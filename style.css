@@ -21,7 +21,12 @@ html {
     color: #6c757d;
     font-size: .7rem;
 }
-
+.btn {
+    transition: background-color .2s , color .2s;
+}
+.nav-link {
+    transition: color .2s;
+}
 /* --------------- CAROUSEL --------------- */
 @media (max-width: 770px) {
     .carousel-item img{
@@ -29,8 +34,11 @@ html {
         object-fit: cover;
         filter:brightness(.40);
     }
+    #carouselBsAs + div .my-container {
+        background-color: rgba(0, 0, 0 , .5);
+        width: 100vw;
+    }
 }
-
 .carousel-item img{
     height: 750px;
     object-fit: cover;
@@ -39,6 +47,13 @@ html {
 .carousel-item {
     transition: transform 1.5s;
 }
+/* Agrega un fondo al front */
+/* #carouselBsAs + div .my-container {
+    transition: background-color .4s;
+}
+#carouselBsAs + div .my-container:hover {
+    background-color: rgba(0, 0, 0 , .5);
+} */
 
 /* --------------- NAVBAR --------------- */
 

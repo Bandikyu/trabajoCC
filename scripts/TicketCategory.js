@@ -4,7 +4,7 @@ export default function ticketCategory() {
 /* Cuando cambio la seleccion cambio las tarjetas */
 selectCategory.addEventListener("change", () => {
   let card = document.getElementById(["target" + selectCategory.value]);
-  selectCategory.value !== "Ninguna" ? (card.checked = true) : false;
+  selectCategory.value !== "Ninguna" ? (card.checked = true) : cards.forEach(c => c.checked = false);
   printResult.textContent = "";
   btnBuy.style.display = "none";
   btnResult.style.display = "block";
