@@ -34,10 +34,6 @@ html {
         object-fit: cover;
         filter:brightness(.40);
     }
-    #carouselBsAs + div .my-container {
-        background-color: rgba(0, 0, 0 , .5);
-        width: 100vw;
-    }
 }
 .carousel-item img{
     height: 750px;
@@ -47,13 +43,6 @@ html {
 .carousel-item {
     transition: transform 1.5s;
 }
-/* Agrega un fondo al front */
-/* #carouselBsAs + div .my-container {
-    transition: background-color .4s;
-}
-#carouselBsAs + div .my-container:hover {
-    background-color: rgba(0, 0, 0 , .5);
-} */
 
 /* --------------- NAVBAR --------------- */
 
