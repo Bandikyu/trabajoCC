@@ -21,7 +21,7 @@ Para no tener este problema **al probar las dimensiones**. **Si se borran** algu
 
 ### 📑 Características del trabajo:
 
-#### Primera parte (HTML - CSS - Bootstrap)
+#### Primera parte (HTML - CSS - Bootstrap)[^2]
 - Use y modifique el `componente carousel` (para agregar todas las imagenes que venian de Bs As en el zip).
 - `Scrollspy` (para que el nav haga seguimiento de los titulos).
 - Use validaciones del `Form`
@@ -38,4 +38,5 @@ Para no tener este problema **al probar las dimensiones**. **Si se borran** algu
 
 ---
 #### 📘 Notas:
-[^1]: Mejorar: En lugar de que el boton `Resumen` cambie a `Comprar` cuando se le hace click, que cambie cuando haya un resultado.
+[^1]: Mejorar => En lugar de que el boton `Resumen` cambie a `Comprar` cuando se le hace click, que cambie cuando haya un resultado.
+[^2]: History => [Old branch](https://github.com/Bandikyu/trabajoCC/tree/HTML-CSS-Boostrap)
